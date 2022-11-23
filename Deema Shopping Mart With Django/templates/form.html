@@ -1,0 +1,47 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/form.css">
+    <link rel="shortcut icon" href="../static/image/logo/1.png" type="image/x-icon">
+    <title>Form</title>
+</head>
+<body>
+    <center><h1>{{d}}</h1></center>
+    <div id="main">
+        <!-- <center> -->
+    <div id="formdiv">
+        <h1 id="title">Student_Entry_Form</h1>
+        <form method="POST" action="/form/" class="form-style-9" id="form" target="_rana">
+            {% csrf_token %}
+            <ul>
+            <li>
+                <input type="text" name="Father_name" class="field-style field-split align-left" required placeholder="Father_name" />
+                <input type="date" name="Dath_Of_Birth" class="field-style field-split align-right" required placeholder="Dath_Of_Birth" />
+            </li>
+            <li>
+                <input type="text" name="User_name" class="field-style field-split align-left" required placeholder="User_name" />
+                <input type="password" name="Password" class="field-style field-split align-right" required placeholder="Password" />
+            </li>
+            <li>
+            <input type="email" name="Email" class="field-style field-full align-none" required placeholder="Email" />
+            </li>
+            <li>
+            <textarea name="About_user" class="field-style" placeholder="About_user" required></textarea>
+            </li>
+            <li>
+                <input type="file" name="prof_pic" required value="prof_pic"/>
+            </li>
+            <li>
+                <input type="submit" required value="Submit" />
+            </li>
+            </ul>
+            </form>
+    </div>
+<!-- </center> -->
+</div>
+</body>
+</html>
